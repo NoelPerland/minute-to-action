@@ -32,7 +32,7 @@ Deploy this repository as a Vercel Next.js project with Node 24. Configure `SUPA
 
 ## Design
 
-A working project journal: ivory, navy, muted yellow, Newsreader serif document headings and DM Sans controls. A dated meeting index and a cross-meeting action board separate context from follow-through.
+An editorial product page pairs warm paper, navy and citrus with an interactive, hand-written note-to-action example. The example is explicitly illustrative; real processing happens in `/workspace`. The working journal uses the same visual language, with a dated meeting index and a cross-meeting action board separating context from follow-through.
 
 Fonts are served by Google Fonts under their respective open font licenses; system fonts remain available when offline. Respect reduced-motion preferences. Native controls and dialogs support keyboard use. The app is designed for desktop and portrait mobile.
 

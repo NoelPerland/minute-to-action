@@ -1,12 +1,31 @@
 import Link from "next/link";
+import HeroDemo from "./hero-demo";
 
 export default function Home() {
- return <main className="minutes journal-home">
-  <header className="site-nav"><Link className="brand" href="/"><span className="brand-icon">m/</span>Minute to Action</Link><nav aria-label="Main"><a href="#how">The method</a><Link className="button dark" href="/workspace">Open your journal ↗</Link></nav></header>
-  <section className="journal-intro"><p className="eyebrow">MEETING NOTES, WITH SOMEWHERE TO GO</p><h1>Good conversations<br/>deserve <em>a next step.</em></h1><div className="journal-intro-bottom"><p>Keep the decisions. Give the actions an owner. Leave the loose ends where you can find them.</p><div><Link className="button accent" href="/workspace">Start with your notes →</Link><span>No account needed · You review every draft</span></div></div></section>
-  <section className="journal-spread" aria-label="Illustrative meeting journal"><div className="spread-margin"><span>FIELD NOTES</span><strong>01</strong><span>EXAMPLE MEETING</span></div><div className="spread-notes"><p className="eyebrow">LAUNCH CHECK-IN / EXAMPLE</p><h2>A smaller launch.<br/>A clearer plan.</h2><p className="hand-note">“Let’s publish the landing page first. Maya can finish navigation by Friday. We still need a decision on the blog.”</p><div className="decision-note"><span>DECISION</span><p>Launch the landing page first.<br/>Keep the blog out of this release.</p></div></div><div className="spread-actions"><p className="eyebrow">THE FOLLOW-THROUGH</p><div className="agenda-item"><span className="agenda-check"/><div><strong>Finish mobile navigation</strong><p>Maya · Friday</p></div></div><div className="agenda-item"><span className="agenda-question">?</span><div><strong>When should the blog launch?</strong><p>Open question · No date agreed</p></div></div><p className="journal-caption">Example only. Missing owners and dates stay unassigned.</p><Link href="/workspace" className="journal-text-link">Make a plan from your notes ↗</Link></div></section>
-  <section id="how" className="journal-method"><div><p className="eyebrow">A SIMPLE WORKING HABIT</p><h2>Leave the meeting.<br/>Keep the thread.</h2></div><ol><li><span>01</span><div><h3>Bring the rough notes</h3><p>Paste what was said. No recording, meeting bot or calendar permissions.</p></div></li><li><span>02</span><div><h3>Read it with a pencil</h3><p>Review the AI draft. Edit decisions, owners, dates and questions before saving.</p></div></li><li><span>03</span><div><h3>Return to the work</h3><p>Track actions across meetings. Export a Markdown handoff or CSV action list.</p></div></li></ol></section>
-  <section className="journal-boundaries"><h2>Your notes.<br/>Your judgement.</h2><div><p>AI helps organise the first draft. Unstated owners and dates remain unassigned; every field stays editable.</p><p>Guest work is available in this browser for up to 30 days. Export what matters and avoid confidential information in this public demo.</p><Link className="journal-text-link" href="/workspace">Open the working journal ↗</Link></div></section>
-  <footer className="site-footer"><Link className="brand" href="/">Minute to Action</Link><span>By Noel Perland</span><a href="https://github.com/NoelPerland/minute-to-action" target="_blank" rel="noreferrer">Source & engineering notes ↗</a></footer>
- </main>;
+  return <main className="minutes magazine-home">
+    <header className="site-nav">
+      <Link className="brand" href="/" aria-label="Minute to Action home"><span className="brand-icon">m/</span><span>Minute to Action</span></Link>
+      <nav aria-label="Main"><a href="#method">How it works</a><a href="#principles">The thinking</a><Link className="button dark" href="/workspace">Open the workspace <span aria-hidden="true">↗</span></Link></nav>
+    </header>
+
+    <section className="editorial-hero" aria-labelledby="hero-title">
+      <div className="editorial-copy">
+        <p className="eyebrow"><span className="edition-dot" /> THE WORK STARTS AFTER THE MEETING</p>
+        <h1 id="hero-title">Talk is<br />the beginning.<br /><em>Action is</em><br />the point<span className="hero-period">.</span></h1>
+        <div className="hero-bottom"><p>Turn messy meeting notes into clear decisions, named actions and open questions. Then keep the work moving in one journal.</p><div><Link className="button accent" href="/workspace">Turn notes into action <span aria-hidden="true">↗</span></Link><span>Use your own notes · Review every draft</span></div></div>
+      </div>
+      <HeroDemo />
+      <span className="hero-side-note" aria-hidden="true">AN IDEA IS ONLY AS GOOD AS ITS NEXT STEP. / 2026</span>
+    </section>
+
+    <div className="editorial-strip" aria-label="From notes to action"><span>01 / CAPTURE THE MESS</span><span aria-hidden="true">→</span><span>02 / FIND THE SIGNAL</span><span aria-hidden="true">→</span><span>03 / MOVE THE WORK</span></div>
+
+    <section className="editorial-method" id="method"><div className="method-heading"><p className="eyebrow">THE METHOD / NOT ANOTHER MEETING BOT</p><h2>Less <em>“what did we decide?”</em><br />More “here’s what’s next.”</h2><p>No recording, calendar access or automatic sending. You bring the notes; the product helps make them useful.</p></div><div className="method-list"><div><span>01</span><h3>Bring the rough notes.</h3><p>Paste the scraps, shorthand and half-finished thoughts from a real conversation.</p></div><div><span>02</span><h3>Make the meaning explicit.</h3><p>Review editable decisions, actions, owners, dates and questions. Missing details stay missing.</p></div><div><span>03</span><h3>Give the work a home.</h3><p>Save the meeting, move tasks across statuses and export a useful handoff.</p></div></div></section>
+
+    <section className="principles" id="principles"><div className="principles-number">M/02</div><div><p className="eyebrow">A BETTER KIND OF CLARITY</p><h2>It should feel like a<br /><em>well-kept notebook.</em><br />Not another inbox.</h2></div><div className="principles-foot"><p>Meetings live in a dated journal. Actions have their own cross-meeting board. You can return to the context or move straight to the work.</p><Link href="/workspace">Explore the working journal <span aria-hidden="true">↗</span></Link></div></section>
+
+    <section className="editorial-details"><div><span className="detail-index">A /</span><h3>Drafts you can change.</h3><p>AI makes a first pass. Every decision and action remains editable before you save.</p></div><div><span className="detail-index">B /</span><h3>Loose ends stay visible.</h3><p>Unknown owners and dates stay unassigned. Open questions are not quietly turned into facts.</p></div><div><span className="detail-index">C /</span><h3>Your work leaves with you.</h3><p>Export a Markdown handoff or CSV action list. Guest work lasts up to 30 days in this browser.</p></div></section>
+
+    <footer className="editorial-footer"><div className="footer-call"><p className="eyebrow">READY TO MAKE THE NEXT STEP VISIBLE?</p><Link href="/workspace">Let’s get<br /><em>to work.</em><span aria-hidden="true">↗</span></Link></div><div className="footer-meta"><Link className="brand" href="/"><span className="brand-icon">m/</span>Minute to Action</Link><p>A working journal by Noel Perland.<br />Use fictional or non-sensitive notes in this public demo.</p><div><a href="#method">The method ↗</a><Link href="/workspace">Open workspace ↗</Link><a href="https://github.com/NoelPerland/minute-to-action" target="_blank" rel="noreferrer">Source & engineering notes ↗</a></div></div></footer>
+  </main>;
 }
