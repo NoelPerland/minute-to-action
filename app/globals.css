@@ -153,3 +153,4 @@
 @media(prefers-reduced-motion:reduce){.editorial-copy,.transform-demo,.demo-result-body{animation:none!important}.magazine-home .button,.footer-call>a span{transition:none!important}}
 @media(max-width:600px){.editorial-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));white-space:normal;gap:10px;font-size:10px;line-height:1.4}.editorial-strip span:nth-child(even){display:none}}
 .editorial-method .eyebrow{color:#536a24}
+@media(max-width:600px){.minutes.workspace .sidebar nav button{min-height:44px}.minutes.workspace .work-header .account-trigger{min-height:44px;font-size:12px}}
