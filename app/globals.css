@@ -43,7 +43,6 @@
 .magazine-home .eyebrow{color:var(--accent);font-size:11px;letter-spacing:1.4px;font-weight:500}
 .edition-dot{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:8px}
 .editorial-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:5vw;align-items:center;background:#11283d;color:#f8f5ed;padding:76px max(4vw,24px) 96px;min-height:710px;overflow:hidden}
-.editorial-hero:before{content:'M / A';position:absolute;right:-1vw;top:-96px;font-family:'Newsreader',Georgia,serif;font-size:clamp(200px,26vw,380px);line-height:1;color:#ffffff09;pointer-events:none}
 .editorial-copy{position:relative;z-index:1;animation:editorial-enter .6s both}
 .editorial-copy h1{font-family:'Newsreader',Georgia,serif;font-size:clamp(76px,7.7vw,142px);font-weight:400;line-height:.84;letter-spacing:-.07em;margin:27px 0 34px}
 .editorial-copy h1 em{font-style:normal;color:inherit;white-space:nowrap}
@@ -153,4 +152,10 @@
 @media(prefers-reduced-motion:reduce){.editorial-copy,.transform-demo,.demo-result-body{animation:none!important}.magazine-home .button,.footer-call>a span{transition:none!important}}
 @media(max-width:600px){.editorial-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));white-space:normal;gap:10px;font-size:10px;line-height:1.4}.editorial-strip span:nth-child(even){display:none}}
 .editorial-method .eyebrow{color:#536a24}
+.editorial-footer .eyebrow,.minutes.workspace .work-header .eyebrow{display:none}
+.minutes.workspace .sidebar nav button{font-size:14px;min-height:44px}
+.minutes.workspace .record-meta,.minutes.workspace .record-footer{font-size:11px}
+.minutes.workspace .record-card p{font-size:13px}
+@media(min-width:601px){.minutes.workspace .list-toolbar input,.minutes.workspace .filters select{font-size:14px}}
+@media(max-width:600px){.editorial-copy h1{font-size:clamp(54px,13vw,68px)}}
 @media(max-width:600px){.minutes.workspace .sidebar nav button{min-height:44px}.minutes.workspace .work-header .account-trigger{min-height:44px;font-size:12px}}
